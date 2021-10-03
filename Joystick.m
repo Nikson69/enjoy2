@@ -79,6 +79,9 @@
 				action = [[JSActionAnalog alloc] initWithIndex: axes++];
 				[(JSActionAnalog*)action setMax: (double)max];
                 [(JSActionAnalog*)action setMin: (double)min];
+            } else if(usage >= 0xc4 && usage <= 0xc5) {
+                            action = [[JSActionButton alloc] initWithIndex: buttons++ andName: (NSString *)elName];
+                            [(JSActionButton*)action setMax: max];
             } else {
 				continue;
             }

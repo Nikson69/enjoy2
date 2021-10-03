@@ -48,10 +48,14 @@ The files are JSON-encoded and should be portable across machines.
 
 ## Requirements
 
-* Mac OS X 10.6 (Snow Leopard) or higher
+* Mac OS X 11.3 or higher
 * USB gamepad/joystick/controller
 
 ## Changelog
+
+Version 1.2.1
+
+* Add support for LT1 and RT1 from xbox controller as a normal button
 
 Version 1.2
 

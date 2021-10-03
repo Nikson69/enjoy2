@@ -3,16 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8B0C55251709F78F0086F30B /* TranslationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C55231709F78F0086F30B /* TranslationWindow.xib */; };
 		8B0C5528170A07900086F30B /* dualshock.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C5527170A07900086F30B /* dualshock.png */; };
-		8B4B9DE31A2BFD2A0074ADC6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4B9DE21A2BFD2A0074ADC6 /* Sparkle.framework */; };
 		8B4B9DE61A2BFF6B0074ADC6 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B9DE51A2BFF6B0074ADC6 /* dsa_pub.pem */; };
-		8B4B9DE81A2C015A0074ADC6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B4B9DE21A2BFD2A0074ADC6 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B7E22D91707EF6100DBA438 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8B7E22D81707EF6100DBA438 /* README.md */; };
 		8B7E22E01707FD0900DBA438 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E22DD1707FD0900DBA438 /* JSONKit.m */; };
 		8B7E476C15C314A200C588FA /* TargetMouseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E476B15C314A200C588FA /* TargetMouseBtn.m */; };
@@ -41,17 +39,20 @@
 		D594BF830FAE9661007A85F2 /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D594BF820FAE9661007A85F2 /* ApplicationController.m */; };
 		D5F809710FB093400006A4DE /* TargetConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F809700FB093400006A4DE /* TargetConfig.m */; };
 		D5F80A9D0FB0A2FF0006A4DE /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D5617A080FAEAF8300928B3A /* icon.icns */; };
+		E179A09C2709ABDB00D3B7F8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4B9DE21A2BFD2A0074ADC6 /* Sparkle.framework */; };
+		E179A09D2709ABDB00D3B7F8 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4B9DE21A2BFD2A0074ADC6 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8B4B9DE71A2C01450074ADC6 /* CopyFiles */ = {
+		E179A09E2709ABDB00D3B7F8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8B4B9DE81A2C015A0074ADC6 /* Sparkle.framework in CopyFiles */,
+				E179A09D2709ABDB00D3B7F8 /* Sparkle.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -126,7 +127,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D594BF000FAE7397007A85F2 /* IOKit.framework in Frameworks */,
 				D561800A0FAFE8E400928B3A /* Carbon.framework in Frameworks */,
-				8B4B9DE31A2BFD2A0074ADC6 /* Sparkle.framework in Frameworks */,
+				E179A09C2709ABDB00D3B7F8 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +282,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				8B4B9DE71A2C01450074ADC6 /* CopyFiles */,
+				E179A09E2709ABDB00D3B7F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,7 +303,7 @@
 				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Enjoy2" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -403,6 +404,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Frameworks\"",
@@ -416,8 +418,15 @@
 				GCC_PREFIX_HEADER = Enjoy2_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.nikson69;
 				PRODUCT_NAME = Enjoy2;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -426,6 +435,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.2.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,8 +447,15 @@
 				GCC_PREFIX_HEADER = Enjoy2_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.nikson69;
 				PRODUCT_NAME = Enjoy2;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -449,7 +466,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = "";
@@ -462,7 +479,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PREBINDING = NO;
 				SDKROOT = "";
 			};
